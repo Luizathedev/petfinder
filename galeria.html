@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PetFinder</title>
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
+
+<body>
+    <div id="navbar-container"></div>
+    
+  <div class="container" style="grid-template-columns: 1fr;">
+    <div class="card">
+      <div class="products-header">
+        <h2 class="card-title">Galeria de Pets</h2>
+        <div>
+      <p style="font-size: 18px; margin: 30px 0;">
+          Total de pets disponíveis: <span id="petCountDisplay">0</span>
+        </p>
+      <div id="petGallery" class="pet-gallery">
+      </div>
+
+    <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+        });
+    });
+  </script>
+</body>
+</html>

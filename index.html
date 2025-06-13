@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PetFinder</title>
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
+
+<body>
+
+    <div id="navbar-container"></div>
+
+  <div class="caixa" style="grid-template-columns: 1fr;">
+    <div class="card">
+      <h2 class="card-title" style="text-align: center; font-size: 28px; margin-top: 20px;">Bem vindo ao <mark>PetFinder</mark></h2>
+      <div style="text-align: center; padding: 20px;">
+        <p style="font-size: 18px; margin: 30px 0;">
+          Conectamos você a pets incríveis que estão procurando um novo lar!
+        </p>
+        <button onclick="window.location.href='galeria.html';" class="btn">
+                Explorar Galeria
+            </button>
+      </div>
+    </div>
+  </div>
+
+    <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+        });
+    });
+  </script>
+</body>
+</html>
